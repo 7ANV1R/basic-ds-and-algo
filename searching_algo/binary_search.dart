@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print("==============Linear Search=============");
+  print("==============Binary Search=============");
   // var listOfNumbers = [8, 1, 77, 12, 100, 99];
   // var searching = 12;
   print("Enter your list : ");
@@ -13,5 +13,21 @@ void main() {
 }
 
 int binarySearch(List<int> nums, int searchingNum) {
-  return 1;
+  int left = 0;
+  int right = nums.length - 1;
+
+  while (left <= right) {
+    int mid = (left + right) ~/ 2;
+    if (nums[mid] == searchingNum) {
+      print("$searchingNum found in index $mid");
+      return mid;
+    }
+    if (nums[mid] < searchingNum) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  print("$searchingNum not found in list");
+  return -1;
 }

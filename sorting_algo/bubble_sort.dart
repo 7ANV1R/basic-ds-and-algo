@@ -12,6 +12,7 @@ void main() {
 
 List bubbleSort(List<int> nums) {
   int temp;
+
   for (var i = 0; i < nums.length; i++) {
     for (var j = 0; j < nums.length - i - 1; j++) {
       if (nums[j] > nums[j + 1]) {

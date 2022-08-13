@@ -5,9 +5,9 @@ void main() {
   print("==============Acending order=============");
   // var lst = [8, 1, 77, 12, 100, 99];
   List<int> list1 = stdin.readLineSync()!.split(RegExp(r'\s+')).map((e) => int.parse(e)).toList();
-  print("Before sort lst: ${list1}");
+  print("List before sort: ${list1}");
   var newList = selectionSort(list1);
-  print("After sort list: ${newList}");
+  print("Sorted list: ${newList}");
 }
 
 List selectionSort(List<int> nums) {
